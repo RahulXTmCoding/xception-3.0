@@ -1,0 +1,608 @@
+
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="XCEPTION" />
+    <meta name="description" content="Xception:,the national level inter-collegiate fest for those who want ot express the talents of different."/>
+    <meta name="keywords" content="xception,xcepion:,exception,"/>
+    <meta name="application-name" content="Xception" />
+	<title>XCEPTION</title>
+
+	<!-- Behavioral Meta Data -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- Core Meta Data -->
+	<meta name="author" content="Technical Symposium">
+	<meta name="description" content="Technical Symposium &amp; XCEPTION 3.0">
+	<meta name="keywords" content="technical symposium,symposium,technical fest,html5,css3,jquery">
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="favicon.png" type="image/png">
+
+
+	<!-- Fonts -->
+	<link href='assets/4.css' rel='stylesheet' type='text/css'>
+	<link href='assets/5.css' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="css/loader.css"/>
+	<link rel="stylesheet" type="text/css" href="css/framework.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Colors -->
+	<link rel="stylesheet" type="text/css" href="css/colors/cyan.css" title="cyan" media="screen">
+	<link rel="stylesheet" href="css/main.css" />
+		<!-- <link rel="stylesheet" href="assets/css/lightbox.css" /> -->
+		
+		
+	<!-- bootstrap -->
+	<!-- jquery -->
+<script src="assets/jquery.js"></script>
+
+<!-- wow script -->
+<script src="assets/wow/wow.min.js"></script>
+
+
+<!-- boostrap 
+<script src="assets/bootstrap/js/bootstrap.js" type="text/javascript" ></script>
+-->
+<!-- jquery mobile -->
+<script src="assets/mobile/touchSwipe.min.js"></script>
+<script src="assets/respond/respond.js"></script>
+
+<!-- gallery -->
+<script src="assets/gallery/jquery.blueimp-gallery.min.js"></script>
+
+<!-- custom script -->
+<script src="assets/script.js"></script>
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+	<!-- Javascript -->
+	<script src="js/modernizr.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="utility.js"></script>
+	<script>
+		/*function setup()
+		{
+			var xmlHttpRequest=new XMLHttpRequest();
+			xmlHttpRequest.onreadystatechange=function(){
+			if(xmlHttpRequest.readyState==4)
+			{
+			if(xmlHttpRequest.status==200)
+				{
+					var response=xmlHttpRequest.responseText;
+					response=JSON.parse(response);
+					if(response.success)
+					{
+						result=response.result;
+						document.getElementById("editVersion").innerHTML=result.version;
+						document.getElementById("editDate").innerHTML=result.date;
+						document.getElementById("editAbout").innerHTML=result.about;
+						document.getElementById("editTheme").innerHTML=result.theme;
+					}
+				}
+			return;
+			}
+			if(xmlHttpRequest.status==404)
+			{
+
+			}
+			};
+			xmlHttpRequest.open('GET','getMainPage',true);
+			xmlHttpRequest.send();
+
+
+
+		}
+		window.addEventListener('load',setup);
+	*/</script>
+	<script>
+/*		function setup()
+		{
+
+			var xmlHttpRequest=new XMLHttpRequest();
+			xmlHttpRequest.onreadystatechange=function(){
+			if(xmlHttpRequest.readyState==4)
+			{
+			if(xmlHttpRequest.status==200)
+				{
+					var response=xmlHttpRequest.responseText;
+					response=JSON.parse(response);
+					if(response.success)
+					{
+						result=response.result;
+						var gallery_images=document.getElementById("gallery_images");
+						for(var index=0;index<result.length;index++)
+						{
+							var source=result[index];
+							var imageDiv=document.createElement("div");
+							imageDiv.classList.add("item");
+							if(index==0) imageDiv.classList.add("active");
+							var img=document.createElement("img");
+							img.setAttribute("src",source);
+							img.setAttribute("alt","Img");
+							img.setAttribute('id',(index+1).toString());
+							img.style.width='100%';
+							img.style.height='100%'
+							imageDiv.appendChild(img);
+							gallery_images.appendChild(imageDiv);
+						}
+					}
+				}
+			return;
+			}
+			if(xmlHttpRequest.status==404)
+			{
+
+			}
+			};
+			xmlHttpRequest.open('GET','getGalleryImages',true);
+			xmlHttpRequest.send();
+
+
+		}
+		window.addEventListener('load',setup);
+	*/</script>
+	<script>
+		/*function setup()
+		{
+
+			var xmlHttpRequest=new XMLHttpRequest();
+			xmlHttpRequest.onreadystatechange=function(){
+			if(xmlHttpRequest.readyState==4)
+			{
+			if(xmlHttpRequest.status==200)
+				{
+					var response=xmlHttpRequest.responseText;
+					response=JSON.parse(response);
+					if(response.success)
+					{
+						result=response.result;
+						for(var index=0;index<result.length;index++)
+						{
+							var socialMedia=result[index];
+							if(socialMedia['name'].toUpperCase()=='FACEBOOK')
+							{
+		//						document.getElementById('editFb').style.display='block';
+								document.getElementById('editFb').setAttribute('href',socialMedia['link']);
+							}
+							if(socialMedia['name'].toUpperCase()=='YOUTUBE')
+							{
+		//						document.getElementById('editYoutube').style.display='block';
+								document.getElementById('editYoutube').setAttribute('href',socialMedia['link']);
+							}
+							if(socialMedia['name'].toUpperCase()=='INSTAGRAM')
+							{
+		//						document.getElementById('editInsta').style.display='block';
+								document.getElementById('editInsta').setAttribute('href',socialMedia['link']);
+							}
+							if(socialMedia['name'].toUpperCase()=='TWITTER')
+							{
+		//						document.getElementById('editTwit').style.display='block';
+								document.getElementById('editTwit').setAttribute('href',socialMedia['link']);
+							}
+						}
+					}
+				}
+			return;
+			}
+			if(xmlHttpRequest.status==404)
+			{
+
+			}
+			};
+			xmlHttpRequest.open('GET','getSocialMedia',true);
+			xmlHttpRequest.send();
+
+
+		}
+		window.addEventListener('load',setup);*/
+	</script>
+</head>
+<body>
+
+
+   <nav class="navbar navbar-custom navbar-fixed-top" id="NavBar" style="background-color:#000;" role="navigation">
+			<div class="container nav-container">
+	            <div class="navbar-header">
+	                <button type="button" class="navbar-toggle menu-button" data-toggle="collapse" data-target=".navbar-main-collapse" style="height:50%">
+	                    Menu <i class="fa fa-bars"></i>
+	                </button>
+	               
+	              
+	            </div>
+
+	            <!-- Collect the nav links, forms, and other content for toggling -->
+	            <div class="collapse navbar-collapse  navbar-main-collapse" id="top" style="  font-size:13px;">
+	                <ul class="nav navbar-nav" id="nav-list">
+	                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+											<li>
+	                        <a href="#page-top" class="w3-button w3-black nav-button">HOME</a>
+	                    </li>
+	                    <li>
+	                        <a class="w3-button w3-black nav-button" href="events.html">EVENTS</a>
+	                    </li>
+	               
+	                    <li>
+	                        <a class="w3-button w3-black nav-button" href="#gallery">GALLERY</a>
+	                    </li>
+	                    <!-- <li>
+	                        <a class="w3-button w3-black nav-button" href="#contact">Contact Us</a>
+	                    </li> -->
+	                    <li>
+	                    	<li>
+	                        <a class="w3-button w3-black nav-button" href="sponsors.html" id="sponsors">SPONSORS</a>
+	                    </li>
+											<li>
+													<a class="w3-button w3-black nav-button" href="ourteam.html" id="webinar">OUR TEAM</a>
+											</li>
+											<li>
+													<a class="w3-button w3-black nav-button" href="register.html" id="blog">REGISTER</a>
+											</li>
+											
+											<li>
+													<a class="w3-button w3-black nav-button" href="schedule.docx" id="schdule">SCHEDULE</a>
+											</li>
+											<li>
+													<a class="w3-button w3-black nav-button" href="contactus.html" id="contact_us">CONTACT US</a>
+											</li>
+											
+											
+	                </ul>
+	            </div>
+	            <!-- /.navbar-collapse -->
+	        </div>
+		</nav>
+
+
+
+
+	<section id="hero">
+		<ul id="scene" class="scene"
+			data-friction-x="0.1"
+			data-friction-y="0.1"
+			data-scalar-x="25"
+			data-scalar-y="15"
+			>
+			<li class="layer" data-depth="0.00"></li>
+
+			<!-- BG -->
+			<li class="layer" data-depth="0.10" ><div class="background" data-0="transform: translate3d(0px, 0px, 0px);" data-top-bottom="transform: translate3d(0px, 300%, 0px);"></div></li>
+			
+			<li class="layer" data-depth="0.25"><div class="sphere" data-0="opacity: 1;" data-top-bottom="opacity: 0;"><img src="images/sphere.png" alt="sphere"></div></li>
+			
+			<!-- Hero -->
+			<li class="layer" data-depth="0.20"><div class="title" data-0="opacity: 1;" data-top-bottom="opacity: 0;"><img class="has-retina" src="images/col2.png" alt="Opia">
+             <p style="color: white;" id="editVersion"> 3.0
+				</p><!-- Edit here  use id editVersion -->
+			</div></li>
+			
+			<li class="layer" data-depth="0.30">
+				<div class="hero-content" data-0="opacity: 1;" data-top-bottom="opacity: 0;">
+					<img src="images/logoY.png">
+					
+				</div>
+			</li>
+
+			<!-- Flakes -->
+			<li class="layer" data-depth="0.40" >
+				<div id="date-date" class="depth-1 flake1" data-0="opacity: 1;" data-top-bottom="opacity: 0;"><p style="color: white;float: left;">Socio-Tech FEST
+				</p>
+<p id="editDate" style="color: white; ">22FEB-24FEB
+				</p><!-- edit here use id editdate -->
+			</div>
+				<div class="depth-1 flake2" data-0="opacity: 1;" data-top-bottom="opacity: 0;"><img src="images/flakes/depth1/flakes2.png" alt="flake"></div>
+				<div class="depth-1 flake3" data-0="opacity: 1;" data-top-bottom="opacity: 0;"><img src="images/flakes/depth1/flakes3.png" alt="flake"></div>
+				
+			</li>
+			<li class="layer" data-depth="0.50">
+				<div class="depth-2 flake1" data-0="opacity: 1;" data-top-bottom="opacity: 0;"><img src="images/flakes/depth2/flakes1.png" alt="flake"></div>
+				<div class="depth-2 flake2" data-0="opacity: 1;" data-top-bottom="opacity: 0;"><img src="images/flakes/depth2/flakes2.png" alt="flake"></div>
+			</li>
+			<li class="layer" data-depth="0.60">
+				<div class="depth-3 flake1" data-0="opacity: 1;" data-top-bottom="opacity: 0;"><img src="images/flakes/depth3/flake5.png" alt="flake"></div>
+				<div class="depth-3 flake2" data-0="opacity: 1;" data-top-bottom="opacity: 0;"><img src="images/flakes/depth3/flakes2.png" alt="flake"></div>
+				<div class="depth-3 flake3" data-0="opacity: 1;" data-top-bottom="opacity: 0;"><img src="images/flakes/depth3/flakes3.png" alt="flake"></div>
+				<div class="depth-3 flake4" data-0="opacity: 1;" data-top-bottom="opacity: 0;"><img src="images/flakes/depth3/flakes4.png" alt="flake"></div>
+			</li>
+			<li class="layer" data-depth="0.80"><div class="depth-4" data-0="opacity: 1;" data-top-bottom="opacity: 0;"><img src="images/flakes/depth4/flakes.png" alt="flake"></div></li>
+			<li class="layer" data-depth="1.00"><div class="depth-5" data-0="opacity: 1;" data-top-bottom="opacity: 0;"><img src="images/flakes/depth5/uec2.png" alt="flake"></div></li>
+		</ul>
+		
+		<a id="action" href="#intro"></a>
+		
+	</section>
+	
+<section id="about" class="wrapper style1 special">
+						<div class="inner">
+							<header class="major">
+							<div>
+								<h2>About Us</h2>
+							</div>
+								<img src="images/about.png"
+								id = "mv_image"> <br> <br>
+								<p style = "text-align:justify" id="editAbout">Xception is a zestful event started by CSE department of UECU in 2018.
+Enthusiastic talents have taken initiative to change the vision of society. Our greatest natural resource is the mind of our children, we nurture them to create sparkling future. We do what makes our soul happy and the best way to find yourself is to lose yourself in service of others. We want to ignite the flame as in a gentle way as we can shake the world.<br><br>We are organizing an event and providing an opportunity to the emerging technical youth with tremendous calibre to unleash them with fun events and technical ones to be conducted hereby.<br><br>We believe 'An investment in knowledge always pays the best Interest'. Education is not learning the facts but training minds to think.To enrich the quality and quantity of skills and knowledge,we intend to deliver services and thus, aid for a noble cause towards the society.Adding silver feathers to its success we seek active participation .</p>
+								<br/><!-- Edit this use id editAbout-->
+						</div>
+					</section>
+
+				
+				<!-- four -->
+					<section id="collaborations" class="wrapper style1 special">
+						<div class="inner">
+							<h2>Theme</h2> </br>
+							</div>
+								<img src="images/humanity1.jpg"
+								id = "mv_image"> <br> <br>
+								<p id="editTheme" style = "text-align:justify;margin-left: 60px;margin-right: 60px;">Xception is a socio technical fest of computer science and engineering department of Government engineering college,Ujjain.Every year we opt a social theme for which we dedicate for the whole year.Child empowerment,Women empowerment are our previous themes empowering underprivileged children and for uplifting the women in society. This year we opted for a more humane approach towards the society.We are encouraging the youth of our country to believe in and follow the holy principle of humanity.We sincerely hope our one small step may be a giant leap for mankind. </p>
+								<br/> <!-- Edit this use id editTheme -->
+						</div>
+						</div>
+					</section>
+
+					<!-- Five -->
+					<section id="gallery" class="wrapper style1 special">
+						<div class="inner">
+							<header class="major">
+								<h2>Gallery</h2>
+								<p>More images to be added soon.</p>
+								<br/>
+								<div id="myCarousel" class="carousel slide" data-ride="carousel">
+									
+									<div class="carousel-inner" id="gallery_images">
+										<div class="item active">
+											<img src='assets2/images/gallery/gallery1.JPG'/>
+										</div>	
+										<div class="item">
+											<img src='assets2/images/gallery/gallery2.JPG'/>
+										</div>	
+										<div class="item">
+											<img src='assets2/images/gallery/gallery3.JPG'/>
+										</div>	
+										<div class="item">
+											<img src='assets2/images/gallery/gallery4.JPG'/>
+										</div>	
+										<div class="item">
+											<img src='assets2/images/gallery/gallery5.JPG'/>
+										</div>	
+										<div class="item">
+											<img src='assets2/images/gallery/gallery6.JPG'/>
+										</div>	
+										<div class="item">
+											<img src='assets2/images/gallery/gallery7.JPG'/>
+										</div>	
+										<div class="item">
+											<img src='assets2/images/gallery/gallery8.JPG'/>
+										</div>	
+										<div class="item">
+											<img src='assets2/images/gallery/gallery9.JPG'/>
+										</div>	
+										<div class="item">
+											<img src='assets2/images/gallery/gallery10.JPG'/>
+										</div>	
+									</div>
+									<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+										<span class="glyphicon glyphicon-chevron-left" style="color:red"></span>
+										<span class="sr-only">Previous</span>
+									</a>
+									<a class="right carousel-control" href="#myCarousel" data-slide="next">
+										<span class="glyphicon glyphicon-chevron-right" style="color:red"></span>
+										<span class="sr-only">Next</span>
+									</a>
+								</div>
+							</header>
+						</div>
+					</section>
+
+					<section id="contact" class="wrapper alt style2">
+						<section class="spotlight">
+							<div class="image"><img src="images/contact-bg.jpg" alt="" /></div><div class="content">
+								<h2>Contact Us</h2>
+								<p style="color:white;"><b >Email</b>: Xception@uecu.ac.in</p>
+								<p style="color:white;"><b >Address</b>:
+								UJJAIN ENGINERING COLLEGE<br/>
+								Ujjain - Indore Rd, Vasant Vihar, Ujjain, Madhya Pradesh 456010<br/>
+								</p>
+
+							</div>
+						</section>
+					</section>
+
+					<section id="team" class="wrapper style3 special" >
+						<div class="inner">
+							<header class="major">
+								<h2>Team</h2>
+
+							</header>
+
+							 <h3> The people who make Xception possible.</h3>
+							</br></br>
+							  <div class="w3-container"><a href="ourteam.html" class="w3-button w3-grey">Learn More</a></div>
+							</ul>
+						</div>
+					</section>
+
+
+				<!-- Footer -->
+					<footer id="footer"> <!-- Edit this use id edit fb,insta,twit -->
+						<ul class="icons">
+							<li><a id="editFb" href="https://www.facebook.com/xception.co.in/" class="icon fa-facebook" style="font-size:24px"><span class="label" >Facebook</span></a></li>
+
+							<li><a id="editTwit" href="#" class="icon fa-twitter" style="font-size:24px"><span class="label">Twitter</span></a></li>
+
+							<li><a id="editInsta" href="https://www.instagram.com/xception_uec/" class="icon fa-instagram" style="font-size:24px"><span class="label">Instagram</span></a></li>
+							<li><a id="editYoutube" href="https://www.instagram.com/xception_uec/" class="icon fa-youtube" style="font-size:24px"><span class="label">Youtube</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; XCEPTION 2020</li>
+						</ul>
+					</footer>
+
+			</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/lightbox.js"></script>
+			<!--<script>
+				$("#NavBar").load("NavBar.html");
+			</script>-->
+			<script>
+			// Set the date we're counting down to
+			var countDownDate = new Date("Sept 15, 2017 10:00:00").getTime();
+
+			// Update the count down every 1 second
+			var x = setInterval(function() {
+
+			  // Get todays date and time
+			  var now = new Date().getTime();
+
+			  // Find the distance between now an the count down date
+			  var distance = countDownDate - now;
+
+			  // Time calculations for days, hours, minutes and seconds
+			  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+			  // Display the result in the element with id="countdown"
+			 // document.getElementById("countdown").innerHTML = days + " d "+ ":" + hours + " h " + ":"
+			  //+ minutes + " m " + ":" + seconds + " s ";
+
+			  // If the count down is finished, write some text
+			  if (distance < 0) {
+			    clearInterval(x);
+			    document.getElementById("countdown").innerHTML = "EXPIRED";
+			  }
+			}, 1000);
+			</script>
+<script>
+//$.noConflict();
+$(document).ready(function(){
+	// Add smooth scrolling to all links in navbar + footer link
+	$(".navbar a, footer a[href='#page-top']").on('click', function(event) {
+
+    // Prevent default anchor click behavior
+    //event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  });
+
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+	for(var i=0;i<12;i++){
+		var id="#"+i;
+		var imagelink="images/PS/IMG_"+(i-1)+".JPG";
+		$(id).attr("src", imagelink);
+	}
+  $(".navbar a").on("click",function(event){
+	$(".collapse").slideToggle('fast');
+  });
+  $(".navbar-toggle").on("click",function(event){
+	$(".collapse").slideToggle('fast');
+  });
+});
+
+$("section").on("click",function(event){
+  if($(".navbar-nav").is(":visible"))
+    $(".collapse").slideToggle('fast');
+  });
+</script>
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	
+	   
+	  	<!-- bootstrap -->
+	<!-- jquery -->
+<script src="assets/jquery.js"></script>
+
+<!-- wow script -->
+<script src="assets/wow/wow.min.js"></script>
+
+
+<!-- boostrap -->
+<script src="assets/bootstrap/js/bootstrap.js" type="text/javascript" ></script>
+
+<!-- jquery mobile -->
+<script src="assets/mobile/touchSwipe.min.js"></script>
+<script src="assets/respond/respond.js"></script>
+
+<!-- gallery -->
+<script src="assets/gallery/jquery.blueimp-gallery.min.js"></script>
+
+<!-- custom script -->
+<script src="assets/script.js"></script>
+
+<link rel="stylesheet" href="assets/bootstrap/css/scroll.css" />
+	  
+      
+   <!-- Indicators -->
+   
+  	<!-- Indicators -->
+  </div>
+
+
+
+    </div>
+  </div>
+	
+
+
+	
+
+	<!-- Begin Pageloader -->
+	<div id="pageloader">
+		<!-- Content -->
+		<div class="pageloader-content">
+			<h4 style="font-size:90%">Xception 3.0<br>Loading..</h4>
+
+			
+			
+		</div><!-- END Content -->
+	</div><!-- END Pageloader -->
+
+	<!-- Javascript -->
+	<script src="js/loader.js"></script>
+	<script src="js/parallax.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

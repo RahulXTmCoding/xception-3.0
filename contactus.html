@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <title>Xception</title>
+ 
+ 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="assets2/css/naveffect.css">
+   <link rel="stylesheet" type="text/css" href="assets2/css/sponsors.css">
+</head>
+<script src="https://smtpjs.com/v3/smtp.js"></script>  
+<body>
+  <div>
+  <div class="container">
+    <!-- This checkbox will give us the toggle behavior, it will be hidden, but functional -->
+    <input id="toggle" type="checkbox">
+
+    <!-- IMPORTANT: Any element that we want to modify when the checkbox state changes go here, being "sibling" of the checkbox element -->
+
+    <!-- This label is tied to the checkbox, and it will contain the toggle "buttons" -->
+    <label class="toggle-container" for="toggle">
+      <!-- If menu is open, it will be the "X" icon, otherwise just a clickable area behind the hamburger menu icon -->
+      <span class="button button-toggle"></span>
+    </label>
+
+    <!-- The nav menu -->
+    <nav class="nav">
+       <a class="nav-item" href="index.html">Home</a>
+      <a class="nav-item" href="events.html">Events</a>
+      <a class="nav-item" href="sponsors.html">Sponsors</a>
+      <a class="nav-item" href="ourteam.html">OUR Team</a>
+      <a class="nav-item" href="register.html">Register</a>
+      <a class="nav-item" href="schedule.docx">Schedule</a>
+     
+     
+      <a class="nav-item" href="contactus.html">Contact Us</a>
+      <!-- <a class="nav-item" href="">Settings</a> -->
+      <!-- <a id="navlogo" class="nav-item" href=""><img src="logo.png" style="height: 70px; width: auto;"></a> -->
+    </nav>
+
+    <!-- Just dummy content like in the animated gif -->
+<div id="navlogo" style="right: 12px;"><a href="index.html"><img src="xception.png"></a></div>
+
+  </div>
+  </div>
+<br>
+  <div class="content">
+   
+ 
+      <div class="container">
+        <div class="row d-flex mb-5 contact-info">
+          <div class="col-lg-12 col-md-12 mb-4 ftco-animate" style="text-align: center;">
+           
+            <h2 class="h4"><i class="fa fa-slack" aria-hidden="true"></i>&nbsp;Contact Our Team</h2>
+           
+          </div>
+          <div class="w-100"></div>
+          <div class="col-lg-3 col-md-3 ftco-animate">
+            <section>
+            <p><span><i class="fa fa-address-book-o" aria-hidden="true"></i>&nbsp;Address:</span> Govt. Engineering College , Indore Road , Ujjain</p>
+            </section>
+          </div>
+          <div class=" col-lg-3 col-md-3 ftco-animate">
+            <section>
+            <p><span><i class="fa fa-mobile" aria-hidden="true"></i>&nbsp;Phone:</span><br>Harshul shivastava-<a href="tel://9644985463" class="contact">+919644985463</a></p>
+            <p style=" margin-top:-15px;" >Shreyas Sharma-<a href="tel://8982540408" class="contact">+918982540408</a></p>
+            </section>
+          </div>
+          <div class=" col-lg-3 col-md-3 ftco-animate">
+            <SECTION>
+            <p><span><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;Email:</span> <a href="mailto:xception@uecu.ac.in" class="contact">xception@uecu.ac.in</a></p>
+          </SECTION>
+          </div>
+          <div class=" col-lg-3 col-md-3 ftco-animate">
+            <SECTION>
+            <p><span><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;Website:</span> <a href="http://xception.co.in" class="contact">xception.co.in</a></p>
+          </SECTION>
+          </div>
+        </div>
+        <div class="row block-9 ftco-animate">
+          <div class="col-lg-6 col-md-6 pr-md-5">
+            <section id="form">
+            <h4 class="mb-4" style="font-size:20px"><i class="fa fa-smile-o" aria-hidden="true"></i>&nbsp;Do you have any questions or feedback ?</h4>
+            <form action="#" method="post">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Name" name="name" id="name" >
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Email" name="email" id="email" >
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Subject" name="subject" id="subject" >
+              </div>
+               <div class="form-group">
+                <input type="text" class="form-control" placeholder="College" name="college" id="college" >
+              </div>
+               <div class="form-group">
+                <input type="text" class="form-control" placeholder="Branch / Year" name="branch" id="branch" >
+              </div>
+              <div class="form-group">
+                <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message" ></textarea>
+              </div>
+              <div class="form-group">
+                <button type="button" class="btn btn-primary py-3 px-5" data-toggle="modal" data-target="#myModal" onclick="sendMessage()" style="float: left;">Send Message</button>
+
+                <div class="modal-body" id="modalBody">
+        <p id="par" style="float: right;"></p>
+        </div>
+              </div>
+            </form>
+          </section>
+          </div>
+         
+
+          <div class="col-md-6 col-xs-12 col-lg-6 ftco-animate" id="map">
+            <section>
+         <center> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.692432455636!2d75.79226531444448!3d23.14491491755363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3963749a7fdc01c1%3A0x8131eb1a96ebdd1b!2sUjjain+Engineering+College!5e0!3m2!1sen!2sin!4v1548831720215" width="100%" height="450" frameborder="0" style="border:0; -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);" allowfullscreen></iframe></center>
+          </section>
+          </div>
+        </div>
+      </div>
+   
+
+
+
+</div>
+
+
+<script type="text/javascript">
+ 
+
+  function sendMessage()
+{
+var name=document.getElementById("name").value;
+var email=document.getElementById("email").value;
+var subject=document.getElementById("subject").value;
+var college=document.getElementById("college").value;
+var branch=document.getElementById("branch").value;
+var message=document.getElementById("message").value;
+var par=document.getElementById("par");
+var k=0;
+if(name.length==0)
+{
+k++;
+}
+if(email.length==0)
+{
+k++;
+}
+if(subject.length==0)
+{
+k++;
+}
+if(college.length==0)
+{
+k++;
+}
+if(branch.length==0)
+{
+k++;
+}
+if(message.length==0)
+{
+k++;
+}
+if(k>0)
+{
+par.style.color="#FF0000";
+par.innerHTML="Please fill all the mandatory fields.";
+return;
+}
+data="Name : "+name+" ,Email : "+email+" ,Subject : "+subject+" ,College : "+college+" ,Branch : "+branch+" ,Message : "+message;
+Email.send({
+Host: "smtp.gmail.com",
+Username : "xception@uecu.ac.in",
+Password : "bqy5xams8a",
+To : 'xception@uecu.ac.in',
+From : "xception@uecu.ac.in",
+Subject : "FEEDBACK ALERT !!",
+Body : data,
+})
+.then(function(message){});
+document.getElementById("name").value="";
+document.getElementById("email").value="";
+document.getElementById("college").value="";
+document.getElementById("subject").value="";
+document.getElementById("branch").value="";
+document.getElementById("message").value="";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <title>Xception</title>
+  <link rel="stylesheet" type="text/css" href="assets2/css/naveffect.css">
+  <link rel="stylesheet" type="text/css" href="assets2/css/register.css">
+</head>
+<body>
+<script src="https://smtpjs.com/v3/smtp.js"></script>  
+<script type="text/javascript">
+function register()
+{
+if (userRegistration())
+{
+var xmlHttpRequest=new XMLHttpRequest();
+var fc=document.getElementById("myform");
+var name=fc.name.value;
+var contactNumber=fc.contactNumber.value;
+var collegeName=fc.collegeName.value;
+var city=fc.city.value;
+var  branch=fc.branch.value;
+var  currentYear=fc.currentYear.value;
+var gender=fc.gender.value;
+var emailId=fc.emailId.value;
+//var events=request.getParameterValues("events");
+var length=fc.events.length;
+var eventsa=new Array();
+var m="";
+for(var k=0;k<length;k++)
+{
+if(fc.events[k].checked)
+{
+if(m=="") m=fc.events[k].value;
+else m=m+","+fc.events[k].value;
+}
+}
+var data= ("Name : "+name+", ContactNumber : "+contactNumber+", CollegeName : "+collegeName+", City : "+city+", Branch : "+branch+", CurrentYear : "+currentYear+", Gender : "+gender+", EmailId : "+emailId+", Events : "+m);
+Email.send({
+Host: "smtp.gmail.com",
+Username : "xception@uecu.ac.in",
+Password : "bqy5xams8a",
+To : 'xception@uecu.ac.in',
+From : "xception@uecu.ac.in",
+Subject : "REGISTRATION ALERT !!",
+Body : data,
+})
+.then(function(message){});
+Email.send({
+Host: "smtp.gmail.com",
+Username : "xception@uecu.ac.in",
+Password : "bqy5xams8a",
+To : emailId,
+From : "xception@uecu.ac.in",
+Subject : "REGISTRATION ALERT !!",
+Body : "Dear "+name+",<br>You have successfully registered for following events : "+m+".<br><br>Thank You !!<br>Regards,<br>Team Xception.",
+})
+.then(function(message){});
+fc.name.value="";
+fc.contactNumber.value="";
+fc.collegeName.value="";
+fc.city.value="";
+fc.branch.value="";
+fc.currentYear.value="";
+fc.gender.value="";
+fc.emailId.value="";
+for(var k=0;k<length;k++)
+{
+if(fc.events[k].checked)
+{
+//alert(fc.events[k].value.);
+fc.events[k].checked=false;
+}
+}
+document.getElementById("result").innerHTML="Registration Successful.";
+}//if ends
+}// function ends
+function userRegistration()
+{
+var fc=document.getElementById("myform");
+var name=fc.name.value;
+var contact=fc.contactNumber.value;
+var college=fc.collegeName.value;
+var city=fc.city.value;
+var  branch=fc.branch.value;
+var  year=fc.currentYear.value;
+var email=fc.emailId.value;
+if((name.length==0 ||city.length==0 || email.length==0 || college.length==0 || branch.length==0 || year.length==0 || contact.length==0))
+{
+document.getElementById("result").innerHTML="";
+document.getElementById("result").innerHTML="Please fill all the mandatory fields....";
+return false;
+}
+if(!isNaN(contact) && contact.length!=10)
+{
+document.getElementById("result").innerHTML="";
+document.getElementById("result").innerHTML="Please fill contact no. properly...";
+return false;
+}
+if(isNaN(contact)  && contact.length!=10)
+{
+document.getElementById("result").innerHTML="";
+document.getElementById("result").innerHTML="Please fill contact no. properly...";
+return false;
+}
+var p=0;
+for(var k=0;k<fc.events.length;k++)
+{
+if(fc.events[k].checked)
+{
+p=1;
+}
+}
+if(p==0)
+{
+document.getElementById("result").innerHTML="";
+document.getElementById("result").innerHTML="Please check any event.";
+return false;
+}
+return true;
+}
+</script>
+ </script> 
+  <div class="container">
+    <!-- This checkbox will give us the toggle behavior, it will be hidden, but functional -->
+    <input id="toggle" type="checkbox">
+
+    <!-- IMPORTANT: Any element that we want to modify when the checkbox state changes go here, being "sibling" of the checkbox element -->
+
+    <!-- This label is tied to the checkbox, and it will contain the toggle "buttons" -->
+    <label class="toggle-container" for="toggle">
+      <!-- If menu is open, it will be the "X" icon, otherwise just a clickable area behind the hamburger menu icon -->
+      <span class="button button-toggle"></span>
+    </label>
+
+    <!-- The nav menu -->
+    <nav class="nav">
+      <a class="nav-item" href="index.html">Home</a>
+      <a class="nav-item" href="events.html">Events</a>
+      <a class="nav-item" href="sponsors.html">Sponsors</a>
+      <a class="nav-item" href="ourteam.html">OUR Team</a>
+      <a class="nav-item" href="register.html">Register</a>
+      <a class="nav-item" href="schedule.docx">Schedule</a>
+      
+      
+      <a class="nav-item" href="contactus.html">Contact Us</a>
+      <!-- <a class="nav-item" href="">Settings</a> -->
+      <!-- <a id="navlogo" class="nav-item" href=""><img src="logo.png" style="height: 70px; width: auto;"></a> -->
+    </nav>
+
+    <!-- Just dummy content like in the animated gif -->
+<div id="navlogo" style="right: 10px;"><a href="index.html"><img src="xception.png"></a></div>
+
+  </div>
+
+<div class="eventsbg">
+  <div class="eventcontainer">
+
+
+
+
+
+
+
+  <div class="form-popup" id="myForm">
+
+  <form id="myform" class="form-container">
+    <h1 style="width: 90%;align-self: center;">Event Registration</h1>
+       <label style="color:red"  id="result"></label>  
+       <br>
+     <label for="name"><b>Name</b></label>
+     <input type="text" id="name" name="name"  placeholder="Full Name" >
+              
+              <label for="email"><b>Email</b></label>
+                <input type="text" id="emailId" name="emailId"  placeholder="Your Email" >
+              <label for="city"><b>City</b></label>
+                <input type="text" id="city" name="city"  placeholder="city" >
+              <label for="college"><b>College</b></label>
+                <input type="text" id="collegeName" name="collegeName"  placeholder="College Name" >
+
+              <label for="branch" style="width:50%; float:left"><b>Branch</b></label>
+              <label for="year" style="width:49%;"><b>Year</b></label>
+                <input type="text" id="branch" name="branch"  placeholder="Branch" style="width:50%; float:left" >
+              
+                <input type="text" id="year" name="currentYear"  placeholder="Year" style="width:49%;" >
+
+             <label for="gender" style="width:30%; float:left" ><b>Gender</b></label>  
+            <label  style="width:30%; float:left"><b>
+             Male <input type="radio" id="male" name="gender" value="Male"  checked></b>
+             </label>
+             <label  style="width:30%; float:left"><b>
+             Female <input type="radio" id="female" name="gender" value="Female" style="width:30%; "></b>
+</label>
+          <br>
+          <br>
+          <br>
+              <label for="contact"><b>Contact</b></label>
+                <input type="text" id="contactNumber" name="contactNumber"  placeholder="Contact No." >
+<!-- add events -->
+<b>Events<b>
+<div id="checkbox" >
+Cultural Event :<br>
+<input type='checkbox' id="checkbox1" name="events" value="Rangmanch">Rangmanch
+<br>
+Technical Event :<br>
+<input type='checkbox' id="checkbox2" name="events" value="Blind Coding">Blind Coding<br>
+<input type='checkbox' id="checkbox3" name="events" value="Programming Date">Programming Date<br>
+<input type='checkbox' id="checkbox4" name="events" value="Technical Quiz">Technical Quiz<br>
+<input type='checkbox' id="checkbox5" name="events" value="GUI Designing">GUI Designing<br>
+<input type='checkbox' id="checkbox6" name="events" value="Innovation and You">Innovation and You<br>
+<input type='checkbox' id="checkbox7" name="events" value="Debugging">Debugging<br>
+<input type='checkbox' id="checkbox8" name="events" value="Mock Interview">Mock Interview<br>
+</div>
+<br>
+<br>
+<br>
+    <input type="button" class="btn" onclick="register()"  value="submit">
+ 
+  </form>
+</div>
+</div>
+</div>
+<!--<div class="eventsbg1" id="eventsbg11">
+</div>
+-->
+</body>
+</html>
